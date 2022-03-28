@@ -1,0 +1,35 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-3">
+            <button (click)="AgregarNuevo()" class="btn btn-primary">Agregar Prospecto</button>
+        </div>
+    </div>
+    <br>
+    <table class="table table-responsive table-dark">
+        <thead style="text-align: center;">
+            <tr>
+                <th>Nombre Completo</th>
+                <th>Direccion</th>
+                <th>Codigo Postal</th>
+                <th>Telefono</th>
+                <th>RFC</th>
+                <th>Estatus</th>
+                <th colspan="2">Opciones</th>
+            </tr>
+        </thead>
+        <tbody> 
+            <tr *ngFor="let item of prospectos">
+                <td>{{item.nombre }} {{item.apeidoP}} {{item.apeidoM}}</td>
+                <td>{{item.colonia }} {{item.calle}} {{item.numero}}</td>
+                <td>{{item.codigoPostal}}</td>
+                <td>{{item.telefono}}</td>
+                <td>{{item.rfc}}</td>
+                <td>{{item.status == 1 ? Enviado : item.status == 2 ? Aceptado : item.status == 3 ? Rechazado : 'undefined' }}</td>
+                <td><button (click)="deleteProspecto(item.id)" class="btn btn-danger">Eliminar</button></td>
+                <td><button [routerLink]="['/prospecto/Edit', item.id]" class="btn btn-warning">Editar</button></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>

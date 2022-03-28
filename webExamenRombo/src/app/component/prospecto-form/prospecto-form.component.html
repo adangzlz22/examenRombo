@@ -1,0 +1,67 @@
+<div>
+    <h4 style="text-align: center;"> {{textoVista}}</h4>
+</div>
+<form action="post">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="text" name="nombre" placeholder="Nombre" class="form-control" [required]="true"  [(ngModel)]="this.prospecto.nombre">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="text" name="apeidoP" placeholder="Apeido Paterno" class="form-control" [required]="true"  [(ngModel)]="this.prospecto.apeidoP">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="text" name="apeidoM" placeholder="Apeido Materno" class="form-control"  [(ngModel)]="this.prospecto.apeidoM">
+            </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="text" name="colonia" placeholder="Colonia" class="form-control" [required]="true"  [(ngModel)]="this.prospecto.colonia">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="text" name="calle" placeholder="Calle" class="form-control" [required]="true"  [(ngModel)]="this.prospecto.calle">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="text" name="numero" placeholder="Numero" class="form-control" [required]="true"  [(ngModel)]="this.prospecto.numero">
+            </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="text" name="telefono" placeholder="Telefono" class="form-control" [required]="true"  [(ngModel)]="this.prospecto.telefono">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="text" name="rfc" placeholder="RFC" class="form-control" [required]="true"  [(ngModel)]="this.prospecto.rfc">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="text" name="codigoPostal" placeholder="Codigo Postal" class="form-control" [required]="true"  [(ngModel)]="this.prospecto.codigoPostal">
+            </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-3">
+            <button class="btn btn-success" (click)="edit == true ? editarProspecto() :guardarProspecto()">Guardar</button>
+        </div>
+      </div>
+    </div>
+
+</form>
